@@ -41,10 +41,12 @@ btn.addEventListener("click", () => {
   
   if(arr_text_in_file.length==0){
     in_array = document.getElementById('get_data').value;
+    
   }else
   {
     in_array=arr_text_in_file;
   }
+  in_array=in_array.toLowerCase()
   document.getElementById('input_data').value = in_array;
   var out_array = "";
   var res_arr=""; 
