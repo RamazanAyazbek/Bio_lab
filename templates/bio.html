@@ -7,6 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bio.css">
     <link rel="stylesheet" href="../css/bioheader.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../css/slick.css"/> -->
+
+
+    <!-- css -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round"> -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> -->
+
+    <!-- css -->
     <title>Bio</title>
 </head>
 
@@ -208,9 +221,17 @@
        </div>
             </div>
             <div class="btn_res">
-                <input type="button" id="segment" value="Segment">
-                <!-- <button id="segment">Segment</button> -->
+                <div class="center_div_window">
+                    <input type="button" id="segment" value="Segment">
+        
                 <button id="clearing">Clear</button>
+                <div class="slick_canvas">
+                    <button id="prev"><span><</span></button>
+                    <p id="counter_p"><span id="counter">1</span>/3</p>
+                    <button id="next"><span>></span></button>
+                  </div>
+                </div>
+<!-- endslick -->
             </div>
             <div class="result_analiz">
                 <div class="visual">
@@ -306,20 +327,47 @@
                     
                 </div>
                 <div class="moving2">
-                    <h2>Coordinates</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem eligendi a, modi repellat quos et. Facere odit a amet laudantium!</p>
+                    <h2>Result Analiz</h2>
+                    <button id="CutCheck">CutCheck</button>
+                    <div class="result_code" id="result_code">
+                        <!-- <p id="result_code_p">Successful</p> -->
+                    </div>
+                    <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem eligendi a, modi repellat quos et. Facere odit a amet laudantium!</p> -->
                 </div>
-              
+              <style>
+                .result_code{
+                    margin:0 auto; 
+                    width: 100px;
+                    margin-top: 10px;
+                    height: 100px;
+                    border-radius: 50%;;
+                    /* background-color: green; */
+                    /* text-align: center; */
+                    /* vertical-align: middle; */
+                }
+                /* #CutCheck{
+                    padding
+                } */
+                #result_code_p{
+                    font-size: 15px;
+                    /* text-align: center; */
+                }
+              </style>
             </div>
        
         </div>
     </main>
-
-    <footer></footer>
+   
+     <footer></footer>
 
 </body>
 <script src="../js/jquery_commpress.js"></script>
 <script src="../js/bio.js"></script>
 <script src="../js/mouse.js"></script>
+
+
+<!-- <script type="text/javascript" src="../js/jquery_commpress.js"></script> -->
+<!-- <script type="text/javascript" src="../js/slick.js"></script> -->
+<script src="../js/slick_move.js"></script>
 
 </html>

@@ -1,107 +1,24 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- <link rel="stylesheet" type="text/css" media="all" href="css/reset.css" /> reset css -->
-<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
-<script src="../js/jquery_commpress.js"></script>
-<style>
-    body{
-       background-color: ivory; 
-      }
-    canvas{
-      border:1px solid red;
-      }
-      
-</style>
-
-<!-- <script>
-  
-$(function(){
-
-    var canvas=document.getElementById("canvas");
-    var ctx=canvas.getContext("2d");
-
-    var canvasOffset=$("#canvas").offset();
-    var offsetX=canvasOffset.left;
-    var offsetY=canvasOffset.top;
-
-    function handleMouseDown(e){
-      mouseX=parseInt(e.clientX-offsetX);
-      mouseY=parseInt(e.clientY-offsetY);
-      $("#downlog").html("Down: "+ mouseX + " / " + mouseY);
-
-      // Put your mousedown stuff here
-
-    }
-
-    function handleMouseUp(e){
-      mouseX=parseInt(e.clientX-offsetX);
-      mouseY=parseInt(e.clientY-offsetY);
-      $("#uplog").html("Up: "+ mouseX + " / " + mouseY);
-
-      // Put your mouseup stuff here
-    }
-
-    function handleMouseOut(e){
-      mouseX=parseInt(e.clientX-offsetX);
-      mouseY=parseInt(e.clientY-offsetY);
-      $("#outlog").html("Out: "+ mouseX + " / " + mouseY);
-
-      // Put your mouseOut stuff here
-    }
-
-    function handleMouseMove(e){
-      mouseX=parseInt(e.clientX-offsetX);
-      mouseY=parseInt(e.clientY-offsetY);
-      $("#movelog").html("Move: "+ mouseX + " / " + mouseY);
-
-      // Put your mousemove stuff here
-
-    }
-
-    $("#canvas").mousedown(function(e){handleMouseDown(e);});
-    $("#canvas").mousemove(function(e){handleMouseMove(e);});
-    $("#canvas").mouseup(function(e){handleMouseUp(e);});
-    $("#canvas").mouseout(function(e){handleMouseOut(e);});
-
-}); // end $(function(){});
-</script> -->
-
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
-
 <body>
-    <p>Move, press and release the mouse</p>
-    <p id="downlog">Down</p>
-    <p id="movelog">Move</p>
-    <p id="uplog">Up</p>
-    <p id="outlog">Out</p>
-    <canvas id="canvas" width="1000px" height="450px"></canvas>
+  <button id="btn1">1</button>
+  <button id="btn2">2</button>
 </body>
-</html>
-
 <script>
-  const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-const canvasWidth = canvas.width;
-console.log(canvasWidth)
-const canvasHeight = canvas.height;
 
-canvas.addEventListener('mousemove', function(e) {
-  const mouseX = e.clientX;
-  const canvasX = canvas.offsetLeft;
-  
-  // calculate the mouse position relative to the canvas
-  const canvasMouseX = mouseX - canvasX;
-  
-  // map the canvasMouseX value from the canvas size to the range of 1 to 50
-  const dimension = Math.floor((canvasMouseX / canvasWidth) * 50) + 1;
-
-  // use the dimension value to draw something on the canvas
-  ctx.clearRect(0, 0, canvasWidth, canvasHeight);
-  ctx.font = '20px Arial';
-  // ctx.fillText(`Dimension: ${dimension}`, 10, 50);
-  let mousecoordinate=dimension
-  console.log(mousecoordinate)
-});
-
+let btn1=document.getElementById('btn1')
+btn1.addEventListener('click', ()=>{
+  document.getElementById('btn2').click();
+})
+let btn2=document.getElementById('btn2')
+btn2.addEventListener('click', ()=>{
+  alert('clikc btn2')
+})
 </script>
+</html>

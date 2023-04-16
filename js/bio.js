@@ -5,6 +5,7 @@ let btn = document.getElementById("generate"),
 var in_array;
 let generated_data = document.getElementById('generated_data').value
 var arr1;
+var result_code=document.getElementById('result_code')
 
 
 
@@ -104,10 +105,7 @@ click_btn=1;
       c: 'brown'
     };
 
-    //   const inputString = prompt('Введите строку:');
-    // let in_array = document.getElementById('get_data').value;
-// var example="attttttttttttttttttttttttttttttttttttttttttttttttcattttttttttttttttttttttttttttttttttttttttttttttttcattttttttttttttttttttttttttttttttttttttttttttttttcattttttttttttttttttttttttttttttttttttttttttttttttcattttttttttttttttttttttttttttttttttttttttttttttttcattttttttttttttttttttttttttttttttttttttttttttttttcattttttttttttttttttttttttttttttttttttttttttttttttcattttttttttttttttttttttttttttttttttttttttttttttttcattttttttttttttttttttttttttttttttttttttttttttttttcattttttttttttttttttttttttttttttttttttttttttttttttcattttttttttttttttttttttttttttttttttttttttttttttttcattttttttttttttttttttttttttttttttttttttttttttttttcattttttttttttttttttttttttttttttttttttttttttttttttcattttttttttttttttttttttttttttttttttttttttttttttttcattttttttttttttttttttttttttttttttttttttttttttttttcattttttttttttttttttttttttttttttttttttttttttttttttcattttttttttttttttttttttttttttttttttttttttttttttttcattttttttttttttttttttttttttttttttttttttttttttttttcattttttttttttttttttttttttttttttttttttttttttttttttcattttttttttttttttttttttttttttttttttttttttttttttttcattttttttttttttttttttttttttttttttttttttttttttttttcattttttttttttttttttttttttttttttttttttttttttttttttc"
-    const inputString = arr1;
+  const inputString = arr1;
     // console.log("arr1:" + arr1)
     const gridColors = [];
 
@@ -155,9 +153,6 @@ click_btn=1;
 
 
 
-// canva
-
-// end canva
 
 
 
@@ -174,11 +169,9 @@ click_btn=2;
       c: 'brown'
     };
 
-    //   const inputString = prompt('Введите строку:');
-    // let in_array = document.getElementById('get_data').value;
 
     const inputString = arr1;
-    // console.log("arr1:" + arr1)
+    
     const gridColors = [];
 
     for (let i = 0; i < inputString.length; i++) {
@@ -199,7 +192,7 @@ click_btn=2;
 
 
 
-        // console.log("x" + xdiver)
+    
         let ydiver = Math.floor(i / 50);
         if (ydiver % 2 == 0) {
           var xdiver = i % 50;
@@ -233,23 +226,37 @@ click_btn=2;
   color_div();
 })
 
+var ans_end="", ans_end_1="", ans_end_2=""; 
+var ans__k, ans_1__k, ans_2__k;  
 
+var btn_segment = document.getElementById('segment')
 
-
-const btn_segment = document.getElementById('segment')
 btn_segment.addEventListener('click', () => {
   btn_segment.style.background="#04182e";
+
+
+
   var res="";
   var ans0=""
+  
   var ans="";
-  var ans2=""
-
-   let arr_mod; 
-  console.log(arr1.length)
+  var ans2="";
+  var res_1="";
+  var ans0_1="";
+  
+  var ans_1="";
+  var ans2_1=""
+  var res_2="";
+  var ans0_2="";
+  
+  var ans_2="";
+  var ans2_2=""
+  // console.log(arr1.length)
+  // law-1
   for(let i=0; i<arr1.length-2; i++){
     res=arr1[i]+arr1[i+1]+arr1[i+2]; 
 
-    if(res=="aac"){
+    if(res=="agg" ){
       if(i>=20){   
       for(let j=0; j<i-17; j++)
       {
@@ -279,16 +286,106 @@ btn_segment.addEventListener('click', () => {
       res=""
     }
   }
-var ans_end=ans0+ans+ans2; 
-console.log("len" + ans_end.length)
-// console.log("ans:" + ans_end)
-
+ ans_end=ans0+ans+ans2; 
+ ans__k=ans;
+// console.log("len" + ans_end.length)
 if(ans_end.length==0){
   for(let i=0; i<arr1.length; i++){
     ans_end+='w'; 
   }
 }
 
+// law-2
+// console.log(arr1.length)
+for(let i=0; i<arr1.length-2; i++){
+  res_1=arr1[i]+arr1[i+1]+arr1[i+2]; 
+
+  if(res_1=="ttc" ){
+    if(i>=20){   
+    for(let j=0; j<i-17; j++)
+    {
+      ans0_1+="w";
+    }
+    for(let j=i-17; j<i+3; j++)
+    {
+      ans_1+=arr1[j];
+    }
+    for(let j=i+3; j<arr1.length; j++)
+    {
+      ans2_1+="w";
+    }
+    } else if(i<20){
+    for(let j=0; j<i+3; j++)
+    {
+      ans_1+=arr1[j];
+    }
+    for(let j=i+3; j<arr1.length; j++){
+      ans2_1+='w'
+    }
+  }
+  break; 
+  }
+  
+  else{
+    res_1=""
+  }
+}
+ ans_end_1=ans0_1+ans_1+ans2_1; 
+ ans_1__k=ans_1
+if(ans_end_1.length==0){
+  for(let i=0; i<arr1.length; i++){
+    ans_end+='w'; 
+  }
+}
+// console.log("len" + ans_end_1.length)
+
+// console.log("ans_end_1 : " + ans_end_1)
+// endlaw-2
+// law-3
+// console.log(arr1.length)
+for(let i=0; i<arr1.length-2; i++){
+  res_2=arr1[i]+arr1[i+1]+arr1[i+2]; 
+
+  if(res_2=="ccg" ){
+    if(i>=20){   
+    for(let j=0; j<i-17; j++)
+    {
+      ans0_2+="w";
+    }
+    for(let j=i-17; j<i+3; j++)
+    {
+      ans_2+=arr1[j];
+    }
+    for(let j=i+3; j<arr1.length; j++)
+    {
+      ans2_2+="w";
+    }
+    } else if(i<20){
+    for(let j=0; j<i+3; j++)
+    {
+      ans_2+=arr1[j];
+    }
+    for(let j=i+3; j<arr1.length; j++){
+      ans2_2+='w'
+    }
+  }
+  break; 
+  }
+  
+  else{
+    res_2=""
+  }
+}
+ ans_end_2=ans0_2+ans_2+ans2_2; 
+ ans_2__k=ans_2
+// console.log("len" + ans_end_2.length)
+if(ans_end_2.length==0){
+  for(let i=0; i<arr1.length; i++){
+    ans_end_2+='w'; 
+  }
+}
+// console.log("ans_end_2 : " + ans_end_2)
+// endlaw-3
 
   function color_div() {
 
@@ -299,41 +396,26 @@ if(ans_end.length==0){
       c: 'brown'
     };
 
+    // slick js
+   
+    // endslick
 
-//     var res="";
-//     var ans="";
-//     var ans2=""
-
-//      let arr_mod; 
-//     //  if(document.getElementById('generate_to_color_s_mod').clicked == true){
-//     //   arr_mod=arr1; 
-//     //  }else if(
-//     //   arr_mod=
-//     //  )
-//     // const inputString = arr1;
-//     console.log(arr1.length)
-//     for(let i=0; i<arr1.length-2; i++){
-//       res=arr1[i]+arr1[i+1]+arr1[i+2]; 
-
-//       if(res=="aac"){
-//         for(let j=0; j<i+3; j++)
-//         {
-//           ans+=arr1[j];
-//         }
-//         for(let j=i; j<arr1.length; j++)
-//         {
-//           ans2+="w";
-//         }
-//       }else{
-//         res=""
-//       }
-//     }
-// var ans_end=ans+ans2; 
-// console.log("ans:" + ans_end)
-
-
-    // const inputString = ans_end;
-    const inputString = ans_end; 
+ var inputString;
+    // const inputString = ans_end; 
+    // const inputString = ans_end_1; 
+    // const inputString = ans_end_2; 
+    if(counter==1){
+      inputString=ans_end;
+      //  console.log("counter=1")       
+    } else if(counter==2){
+      inputString = ans_end_1; 
+      // console.log("counter=2")
+    } if(counter==3){
+      inputString = ans_end_2;
+      // console.log("counter=3") 
+    }
+    
+    // 
     const gridColors = [];
     for (let i = 0; i < inputString.length; i++) {
       const letter = inputString[i];
@@ -352,12 +434,12 @@ if(ans_end.length==0){
 
 // ;;;;
 if(click_btn == 1){
-  console.log('clicked s_mod');
+  // console.log('clicked s_mod');
   var x = (i % 50) * cellSize;
   var y = Math.floor(i / 50) * cellSize;
 }else if(click_btn == 2)
 {
-  console.log('clicked k_mod');
+  // console.log('clicked k_mod');
           var ydiver = Math.floor(i / 50);
         if (ydiver % 2 == 0) {
           var xdiver = i % 50;
@@ -399,6 +481,150 @@ var y = ydiver * cellSize;
   color_div();
 })
 
+// end_btn
+
+let cut=document.getElementById("CutCheck");
+var noVirus;
+cut.addEventListener('click', ()=>{
+
+  // console.log("a1:" + ans_end.length + ", a2:"+ans_end_1.length + ", a3:" + ans_end_2.length)
+//  console.log("ans:" + ans.length + ", ans_1 : " + ans_1.length + ", ans_2:" + ans_2.length)
+var v1="agattaagcacggcttcagg",
+    v2="gattaagtacacggttcaggg", 
+    v3="agtacacgggctagggaccgg",
+    v4="cttcagggacgccccacgagg"
+var cut_part="";
+var index_start=0, index_end=0;
+var br=""
+if(ans__k==v1 || ans__k==v2 || ans__k==v3 || ans__k==v4){
+  cut_part=ans__k;
+
+  for(let i=0; i<arr1.length-19; i++){
+    for(let j=i; j<i+20; j++)
+    {
+        br+=arr1[j]
+    }
+    // console.log(br.length)
+    if(br==ans__k){
+      
+         index_start=i
+         index_end=i+20
+         break;
+        // test2=test_arr.replace(v1, '')
+        // break; 
+    }else{
+        // console.log(br)
+        br=""
+    }
+}
+
+
+} else if(ans_1__k==v1 || ans_1__k==v2 || ans_1__k==v3 || ans_1__k==v4){
+cut_part=ans_1__k;
+for(let i=0; i<arr1.length-19; i++){
+  for(let j=i; j<i+20; j++)
+  {
+      br+=arr1[j]
+  }
+  // console.log(br.length)
+  if(br==ans__k){
+    
+       index_start=i
+       index_end=i+20
+       break;
+      // test2=test_arr.replace(v1, '')
+      // break; 
+  }else{
+      // console.log(br)
+      br=""
+  }
+}
+} else if(ans_2__k==v1 || ans_2__k==v2 || ans_2__k==v3 || ans_2__k==v4){
+  cut_part=ans_2__k;
+  for(let i=0; i<arr1.length-19; i++){
+    for(let j=i; j<i+20; j++)
+    {
+        br+=arr1[j]
+    }
+    // console.log(br.length)
+    if(br==ans__k){
+      
+         index_start=i
+         index_end=i+20
+         break;
+        // test2=test_arr.replace(v1, '')
+        // break; 
+    }else{
+        // console.log(br)
+        br=""
+    }
+}
+  } else{
+    if(arr1.length!=0){
+      alert("not found nothing virus")
+      result_code.style.background="green";
+    } else if(arr1.length==0 || arr1.length=='undefined'){
+      alert("no data")
+    }
+
+
+  }
+noVirus=arr1.replace(cut_part, '')
+var cut_arr=in_array.slice(index_start, index_end)
+var noVirus1=in_array.replace(cut_arr, '')
+// console.log("cut_v : " + cut_part)
+// console.log(noVirus.length)
+// alert(noVirus)
+// console.log("index:" + index_start, index_end)
+var quantity_a=0,quantity_t=0,quantity_g=0,quantity_c=0
+var quantity_a_0=0,quantity_t_0=0,quantity_g_0=0,quantity_c_0=0
+for(let i=0; i<noVirus.length; i++)
+{
+  if(noVirus[i]=='a'){
+    quantity_a+=1
+  } else if(noVirus[i]=='t'){
+    quantity_t+=1
+  } else if(noVirus[i]=='g'){
+    quantity_g+=1
+  } else if(noVirus[i]=='c'){
+    quantity_c+=1
+  } 
+  
+}
+for(let i=0; i<noVirus1.length; i++)
+{
+  if(noVirus1[i]=='a'){
+    quantity_a_0+=1
+  } else if(noVirus1[i]=='t'){
+    quantity_t_0+=1
+  } else if(noVirus1[i]=='g'){
+    quantity_g_0+=1
+  } else if(noVirus1[i]=='c'){
+    quantity_c_0+=1
+  } 
+  
+}
+// alert(in_array)
+
+// console.log("n0:" + noVirus1.length, " , n:" + noVirus.length)
+// console.log("a:" + quantity_a +", t:" + quantity_t +", g:" + quantity_g +", c:" + quantity_c)
+// console.log("a0:" + quantity_a_0 +", t0:" + quantity_t_0 +", g0:" + quantity_g_0 +", c0:" + quantity_c_0)
+var sum_a=quantity_a+quantity_a_0,
+sum_t=quantity_t+quantity_t_0,
+sum_c=quantity_c+quantity_c_0,
+sum_g=quantity_g+quantity_g_0
+
+ 
+ if(sum_a==sum_t && sum_g==sum_c){
+  console.log("Success !")
+  // result_code.classList.ad
+  result_code.style.background="green"
+  // result_code.innerHTML+="Hii"
+  } else{
+    result_code.style.background="red"
+  }
+})
+
 
 const clearing_0 = document.getElementById('clearing0')
 
@@ -417,10 +643,7 @@ clearing.addEventListener('click', ()=>{
   const canvas1 = document.getElementById('canvas_vis');
 const ctx1 = canvas1.getContext('2d');
 ctx1.clearRect(0, 0, canvasWidth, canvasHeight);
-// console.log("nege bari mooz")
+
 })
-const home_btn=document.getElementById('home_btn');
-home_btn.addEventListener('click', ()=>{
-  
-})
+
 
