@@ -188,6 +188,10 @@ main {
     border: 1px solid black;
     margin-left: -30.5px;
   }
+  #canvas {
+    border: 1px solid black;
+    margin-left: -0.5px;
+  }
   .link_topics ul li a{
     color:blue;
   }
@@ -404,7 +408,7 @@ main {
     font-size: 14.7px;
     /* margin-bottom: 2.3px; */
     border: 0.5px solid black;
-    padding:0.650px 0px;
+    padding:0.1px 0px;
     font-weight: 600;
     /* padding:-1px;  */
 }
@@ -447,7 +451,7 @@ main {
     /* margin-bottom: 2.3px; */
     border: 0.5px solid black;
     font-weight: 600;
-    padding:0.7px 0px;
+    padding:0.1px 0px;
     /* padding:-1px;  */
 }
 .numerous{
@@ -558,13 +562,23 @@ main {
     margin-right:7px; 
 }
 
-#btn_read_file, #CutCheck{
+#btn_read_file{
   padding: 10px 20px;
   background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+#CutCheck{
+  padding: 16px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left:10px;
+  /* margin-top:2px; */
 }
 #btn_read_file:hover{
   background-color: #0062cc;
@@ -606,4 +620,57 @@ main {
   #counter_p{
       font-weight: 600;
       font-size: 25px;
+  }
+  #result_enter_to_p{
+    font-size: 40px;
+    color:green;
+    font-family:'Lora', serif;;
+   }
+    .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Modal Content */
+    .modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    /* width: 80%; */
+    width: 400px;
+    height: 400px;
+    
+    }
+
+    /* Close Button */
+    .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    }
+    .result_code{
+      margin:0 auto; 
+      width: 100px;
+      margin-top: 10px;
+      height: 100px;
+      border-radius: 50%;;
+  }
+  #result_code_p{
+      font-size: 15px;
   }
