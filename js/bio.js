@@ -228,8 +228,8 @@ click_btn=2;
   color_div();
 })
 
-var ans_end="", ans_end_1="", ans_end_2=""; 
-var ans__k, ans_1__k, ans_2__k;  
+var ans_end="", ans_end_1="", ans_end_2="", ans_end_3=""; 
+var ans__k, ans_1__k, ans_2__k, ans_3__k;  
 
 var btn_segment = document.getElementById('segment')
 
@@ -240,31 +240,35 @@ btn_segment.addEventListener('click', () => {
 
   var res="";
   var ans0=""
-  
   var ans="";
   var ans2="";
+
   var res_1="";
   var ans0_1="";
-  
   var ans_1="";
   var ans2_1=""
+
   var res_2="";
   var ans0_2="";
-  
   var ans_2="";
   var ans2_2=""
+  
+  var ans_3="";
+  var ans2_3=""
+  var res_3="";
+  var ans0_3="";
   // console.log(arr1.length)
   // law-1
   for(let i=0; i<arr1.length-2; i++){
     res=arr1[i]+arr1[i+1]+arr1[i+2]; 
-
-    if(res=="agg" || res=='tgg' || res=='cgg'){
-      if(i>=20){   
-      for(let j=0; j<i-17; j++)
+// || res=='tcc' || res=='ccc' || res=='gcc'
+    if(res=="acc"){
+      if(i>=23){   
+      for(let j=0; j<i-20; j++)
       {
         ans0+="w";
       }
-      for(let j=i-17; j<i+3; j++)
+      for(let j=i-20; j<i+3; j++)
       {
         ans+=arr1[j];
       }
@@ -272,15 +276,16 @@ btn_segment.addEventListener('click', () => {
       {
         ans2+="w";
       }
-      } else if(i<20){
-      for(let j=0; j<i+3; j++)
-      {
-        ans+=arr1[j];
-      }
-      for(let j=i+3; j<arr1.length; j++){
-        ans2+='w'
-      }
-    }
+      } 
+    //   else if(i<20){
+    //   for(let j=i; j<i+3; j++)
+    //   {
+    //     ans+=arr1[j];
+    //   }
+    //   for(let j=i+3; j<arr1.length; j++){
+    //     ans2+='w'
+    //   }
+    // }
     break; 
     }
     
@@ -288,6 +293,7 @@ btn_segment.addEventListener('click', () => {
       res=""
     }
   }
+  // console.log("ans+", ans.length, ": ", ans)
  ans_end=ans0+ans+ans2; 
  ans__k=ans;
 // console.log("len" + ans_end.length)
@@ -302,13 +308,13 @@ if(ans_end.length==0){
 for(let i=0; i<arr1.length-2; i++){
   res_1=arr1[i]+arr1[i+1]+arr1[i+2]; 
 
-  if(res_1=="ttc" ){
-    if(i>=20){   
-    for(let j=0; j<i-17; j++)
+  if(res_1=="tcc" ){
+    if(i>=23){   
+    for(let j=0; j<i-20; j++)
     {
       ans0_1+="w";
     }
-    for(let j=i-17; j<i+3; j++)
+    for(let j=i-20; j<i+3; j++)
     {
       ans_1+=arr1[j];
     }
@@ -316,15 +322,7 @@ for(let i=0; i<arr1.length-2; i++){
     {
       ans2_1+="w";
     }
-    } else if(i<20){
-    for(let j=0; j<i+3; j++)
-    {
-      ans_1+=arr1[j];
-    }
-    for(let j=i+3; j<arr1.length; j++){
-      ans2_1+='w'
-    }
-  }
+    } 
   break; 
   }
   
@@ -348,13 +346,13 @@ if(ans_end_1.length==0){
 for(let i=0; i<arr1.length-2; i++){
   res_2=arr1[i]+arr1[i+1]+arr1[i+2]; 
 
-  if(res_2=="ccg" ){
-    if(i>=20){   
-    for(let j=0; j<i-17; j++)
+  if(res_2=="gcc" ){
+    if(i>=23){   
+    for(let j=0; j<i-20; j++)
     {
       ans0_2+="w";
     }
-    for(let j=i-17; j<i+3; j++)
+    for(let j=i-20; j<i+3; j++)
     {
       ans_2+=arr1[j];
     }
@@ -362,15 +360,7 @@ for(let i=0; i<arr1.length-2; i++){
     {
       ans2_2+="w";
     }
-    } else if(i<20){
-    for(let j=0; j<i+3; j++)
-    {
-      ans_2+=arr1[j];
-    }
-    for(let j=i+3; j<arr1.length; j++){
-      ans2_2+='w'
-    }
-  }
+    } 
   break; 
   }
   
@@ -380,6 +370,7 @@ for(let i=0; i<arr1.length-2; i++){
 }
  ans_end_2=ans0_2+ans_2+ans2_2; 
  ans_2__k=ans_2
+ //gcc - law fourth
 // console.log("len" + ans_end_2.length)
 if(ans_end_2.length==0){
   for(let i=0; i<arr1.length; i++){
@@ -388,6 +379,59 @@ if(ans_end_2.length==0){
 }
 // console.log("ans_end_2 : " + ans_end_2)
 // endlaw-3
+
+
+
+// law-4
+
+for(let i=0; i<arr1.length-2; i++){
+  res_3=arr1[i]+arr1[i+1]+arr1[i+2]; 
+
+  if(res_3=="ccc" ){
+    if(i>=23){   
+    for(let j=0; j<i-20; j++)
+    {
+      ans0_3+="w";
+    }
+    for(let j=i-20; j<i+3; j++)
+    {
+      ans_3+=arr1[j];
+    }
+    for(let j=i+3; j<arr1.length; j++)
+    {
+      ans2_3+="w";
+    }
+    } 
+  break; 
+  }
+  
+  else{
+    res_3=""
+  }
+}
+ ans_end_3=ans0_3+ans_3+ans2_3; 
+ ans_3__k=ans_3
+ 
+ //gcc - law fourth
+// console.log("len" + ans_end_2.length)
+if(ans_end_3.length==0){
+  for(let i=0; i<arr1.length; i++){
+    ans_end_3+='w'; 
+  }
+}
+// console.log("ans_end_2 : " + ans_end_2)
+// endlaw-3
+
+
+
+
+
+var v_1="tctaattcatgtgcccgaagtcc",
+    v_2="ctaattcatgtgcccgaagtccc", 
+    v_3="tcatgtgcccgaagtccctggcc",
+    v_4="gaagtccctggccggggtgctcc",
+    v_5="aaggtcttgcggacggcgctgcc"
+var one_zero=document.getElementById('one_or_zero')
 
   function color_div() {
 
@@ -408,15 +452,46 @@ if(ans_end_2.length==0){
     // const inputString = ans_end_2; 
     if(counter==1){
       inputString=ans_end;
+      if(ans__k==v_1 || ans__k==v_2 || ans__k==v_3 || ans__k==v_4 || ans__k==v_5){
+        // alert('tenten')
+        one_zero.innerHTML='+1+'
+        console.log('virus found')
+      } else{
+        one_zero.innerHTML='+0+'
+      }
       //  console.log("counter=1")       
     } else if(counter==2){
       inputString = ans_end_1; 
+      if(ans_1__k==v_1 || ans_1__k==v_2 || ans_1__k==v_3 || ans_1__k==v_4 || ans_1__k==v_5){
+        // alert('tenten')
+        one_zero.innerHTML='+1+'
+        console.log('virus found')
+      } else{
+        one_zero.innerHTML='+0+'
+      }
       // console.log("counter=2")
-    } if(counter==3){
+    } else if(counter==3){
       inputString = ans_end_2;
+      if(ans_2__k==v_1 || ans_2__k==v_2 || ans_2__k==v_3 || ans_2__k==v_4 || ans_2__k==v_5){
+        // alert('tenten')
+        one_zero.innerHTML='+1+'
+        console.log('virus found')
+      } else{
+        one_zero.innerHTML='+0+'
+      }
       // console.log("counter=3") 
     }
-    
+    else if(counter==4){
+      inputString = ans_end_3;
+      if(ans_3__k==v_1 || ans_3__k==v_2 || ans_3__k==v_3 || ans_3__k==v_4 || ans_3__k==v_5){
+        // alert('tenten')
+        one_zero.innerHTML='+1+'
+        console.log('virus found')
+      } else{
+        one_zero.innerHTML='+0+'
+      }
+      // console.log("counter=4") 
+    }
     // 
     const gridColors = [];
     for (let i = 0; i < inputString.length; i++) {

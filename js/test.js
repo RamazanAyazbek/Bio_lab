@@ -1,4 +1,2 @@
-let a="AFafcAA"
-a=a.toLocaleLowerCase()
-// let b = a.toL/owerCase()
-console.log(a)
+let v1="tctaattcatgtgcccgaagtcc"
+console.log(v1.length)

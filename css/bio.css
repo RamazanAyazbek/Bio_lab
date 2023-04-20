@@ -408,7 +408,7 @@ main {
     font-size: 14.7px;
     /* margin-bottom: 2.3px; */
     border: 0.5px solid black;
-    padding:0.1px 0px;
+    padding:0.5px 0px;
     font-weight: 600;
     /* padding:-1px;  */
 }
@@ -451,7 +451,7 @@ main {
     /* margin-bottom: 2.3px; */
     border: 0.5px solid black;
     font-weight: 600;
-    padding:0.1px 0px;
+    padding:0.5px 0px;
     /* padding:-1px;  */
 }
 .numerous{
@@ -625,6 +625,7 @@ main {
     font-size: 40px;
     color:green;
     font-family:'Lora', serif;;
+    font-weight: 700;
    }
     .modal {
     display: none;
@@ -674,3 +675,9 @@ main {
   #result_code_p{
       font-size: 15px;
   }
+  .define_visual{
+    margin-left: 30px;
+    /* text-align: ce
+    nter; */
+    /* float: center; */
+}
