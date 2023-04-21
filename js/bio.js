@@ -559,15 +559,18 @@ var y = ydiver * cellSize;
 })
 
 // end_btn
-
+var canvas = document.querySelector('canvas');
 
 
 const clearing_0 = document.getElementById('clearing0')
 
 clearing_0.addEventListener('click', ()=>{
+  
   btn_c.style.background="#0078d0";
   btn_k.style.background="#0078d0";
   const canvas0 = document.getElementById('canvas');
+  canvasWidth=canvas0.width
+  canvasHeight=canvas0.height
 const ctx0 = canvas0.getContext('2d');
 ctx0.clearRect(0, 0, canvasWidth, canvasHeight);
 // console.log("nege bari mooz")
@@ -578,6 +581,8 @@ clearing.addEventListener('click', ()=>{
   btn_segment.style.background="#0078d0";
   const canvas1 = document.getElementById('canvas_vis');
 const ctx1 = canvas1.getContext('2d');
+canvasWidth=canvas1.width
+canvasHeight=canvas1.height
 ctx1.clearRect(0, 0, canvasWidth, canvasHeight);
 
 })
